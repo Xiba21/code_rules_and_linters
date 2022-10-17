@@ -48,8 +48,7 @@ def start_training(char_name, char_class):
     print(
         'Введи одну из команд: attack для проведения атаки, '
         'defence - блокирование атаки противника и special '
-        '- активация специальной возможности класса.'
-    )
+        '- активация специальной возможности класса.')
     print('Чтобы пропустить тренировку введите - skip')
     cmd = None
     while cmd != 'skip':
@@ -69,8 +68,7 @@ def choice_char_class():
     while approve_choice != 'y':
         char_class = input(
             'Для выбора класса персонажа введите его '
-            'название (warrior, mage, healer): '
-        )
+            'название (warrior, mage, healer): ')
         if char_class == 'warrior':
             print('Описание воителя ....')
         if char_class == 'mage':
@@ -78,8 +76,7 @@ def choice_char_class():
         if char_class == 'healer':
             print('Опиание лекаря ....')
         approve_choice = input(
-            'Подтвердите (Y) или повторите (any key) выбор '
-        ).lower()
+            'Подтвердите (Y) или повторите (any key) выбор ').lower()
     return char_class
 
 
