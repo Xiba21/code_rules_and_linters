@@ -18,11 +18,11 @@ def attack(char_name, char_class):
 
 def defence(char_name, char_class):
     if char_class == 'warrior':
-        return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
+        return f'{char_name} блокировал {10 + randint(5, 10)} урона'
     if char_class == 'mage':
-        return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
+        return f'{char_name} блокировал {10 + randint(-2, 2)} урона'
     if char_class == 'healer':
-        return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
+        return f'{char_name} блокировал {10 + randint(2, 5)} урона'
 
 
 def special(char_name, char_class):
@@ -32,9 +32,9 @@ def special(char_name, char_class):
             'умение  - выпосливось {80 + 25}'
         )
     if char_class == 'mage':
-        return (f'{char_name} примернил специальное умение -  атака {5 + 40}')
+        return f'{char_name} примернил специальное умение -  атака {5 + 40}'
     if char_class == 'healer':
-        return (f'{char_name} примернил специальное умение - защита {10 + 30}')
+        return f'{char_name} примернил специальное умение - защита {10 + 30}'
 
 
 def start_training(char_name, char_class):
@@ -48,8 +48,7 @@ def start_training(char_name, char_class):
     print(
         'Введи одну из команд: attack для проведения атаки, '
         'defence - блокирование атаки противника и special '
-        '- активация специальной возможности класса.'
-    )
+        '- активация специальной возможности класса.')
     print('Чтобы пропустить тренировку введите - skip')
     cmd = None
     while cmd != 'skip':
@@ -69,8 +68,7 @@ def choice_char_class():
     while approve_choice != 'y':
         char_class = input(
             'Для выбора класса персонажа введите его '
-            'название (warrior, mage, healer): '
-        )
+            'название (warrior, mage, healer): ')
         if char_class == 'warrior':
             print('Описание воителя ....')
         if char_class == 'mage':
@@ -78,8 +76,7 @@ def choice_char_class():
         if char_class == 'healer':
             print('Опиание лекаря ....')
         approve_choice = input(
-            'Подтвердите (Y) или повторите (any key) выбор '
-        ).lower()
+            'Подтвердите (Y) или повторите (any key) выбор ').lower()
     return char_class
 
 
